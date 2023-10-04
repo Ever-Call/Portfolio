@@ -1,0 +1,126 @@
+*{
+  /* o BORDER-BOX significa que toda vez que adicionamos uma borda à um elemento ele vai descontar os 
+  px de dentro em vez de fora assim não atrapalhamos os outros elementos */
+  box-sizing: border-box; 
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+:root{
+  --bg-color-dark: #212529;
+  --bg-color-light: #f1f5f9;
+  --a-colo: #212529;
+
+  --border-color: #666;
+
+  --font-color-light: #f1f5f9;
+  --font-color-dark: #212529;
+
+  --primary-color: #4dff91;
+  --secondary-color: #142977;
+
+  --error-color: #ff0043;
+}
+
+body{
+  background-color: var(--bg-color-dark);
+}
+
+main{
+  display: block;
+  margin: 0 auto;
+  max-width: 40rem;
+  padding: 0 1.5rem 2.5rem;
+  position: relative;
+  /* positon relative vai manter os elementos dentro do main que seria o pai da maioria dos nossos
+  elementos desse jeitos nossos elementos não podem sair fora do nosso MAIN, ou seja, posição relativa ao main */
+}
+
+header{
+  color: var(--font-color-light);
+  padding:2rem 0;
+}
+
+
+
+#themeSwitcher{
+  color: var(--font-color-light);
+  background-color: var(--bg-color-dark);
+  border: .125rem var(--font-color-light) solid;
+  padding: 0.5rem 1rem;
+}
+#themeSwitcher:hover{
+  background-color: var(--font-color-light);
+  color: var(--bg-color-dark);
+}
+
+button{
+  background-color: var(--primary-color);
+  border-radius: .25rem;
+  border: none;
+  cursor: pointer;
+  transition: .15s;
+  font-weight: 700;
+}
+
+input{
+  display:block;
+  background-color: var(--bg-color-dark);
+  margin: 0 auto;
+  padding: 1rem;
+  border: .125rem var(--border-color) solid;
+  color: var(--font-color-light);
+  width: 100%;
+  border-radius: .5rem;
+  font-size: 1.75rem;/* A letra tbm aumenta o tamanho do input */
+  text-align: end;
+}
+
+#keys{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* é por causa do grid-template-columns os botões ocupam todo o espaço em largura, interessante */
+  gap: 1rem;
+  margin: 2rem 0;
+}
+#keys button{
+  font-size: 1.5rem ;
+  padding: 1rem ;
+  color: var(--bg-color-dark);
+}
+#keys button:hover{
+  filter: brightness(0.8);
+}
+
+#inputResult{
+  border-radius: 0 .5rem .5rem 0;
+  border-width: 2px 2px 2px 0;
+}
+
+#copyToClipboard{
+  background-color: var(--bg-color-dark);
+  color: var(--font-color-light);
+  border: .125rem var(--border-color) solid;
+  border-radius: .5rem 0 0 .5rem;
+  height: 4.25rem;
+  width: 6.4rem;
+}
+
+.flex{
+  display: flex;
+}
+
+.space-between{
+  justify-content: space-between;
+}
+
+.error{
+  background-color: var(--error-color);
+}
+
+.success{
+  /* !important serve para que nossos atributos fiquem por cima dos id */
+  border-color: var(--primary-color) !important;
+  color: var(--primary-color) !important;
+}

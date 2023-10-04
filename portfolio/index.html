@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo da velha</title>
+  <script src="test.js" defer></script>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>  
+  <!-- primeira tela -->
+  <div id="entries">
+    <label for="player1">Jogador 1:</label>
+    <input type="text" id="player1"><br>
+    <label for="player2">Jogador 2:</label>
+    <input type="text" id="player2"><br>
+    <button id="start" onclick="initializeGame()">Jogar</button>
+  </div>
+
+  <!-- parte oculta pelo css -->
+  <div id="container">
+    <h2 id="status"></h2>
+    
+    <section id="gameBoard">
+      <span class="cursor-pointer" data-region="0.0"></span>
+      <span class="cursor-pointer" data-region="0.1"></span>
+      <span class="cursor-pointer" data-region="0.2"></span>
+      <span class="cursor-pointer" data-region="1.0"></span>
+      <span class="cursor-pointer" data-region="1.1"></span>
+      <span class="cursor-pointer" data-region="1.2"></span>
+      <span class="cursor-pointer" data-region="2.0"></span>
+      <span class="cursor-pointer" data-region="2.1"></span>
+      <span class="cursor-pointer" data-region="2.2"></span>
+    </section>
+  </div>
+
+</body>
+</html>
