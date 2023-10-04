@@ -1,0 +1,1 @@
+Só pode ser testado com node
